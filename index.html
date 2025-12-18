@@ -7,16 +7,142 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="images/AKOMU-Icon-New-Round-Edges.png">
-        <meta http-equiv="refresh" content="0; url=https://discord.gg/FMMj8FGYzf">
+        <link rel="shortcut icon" href="images/AKOMU-Icon-New-Rounded-Edges-Little.png">
     </head>
-    <body>
-        <class main>
-            <img src="images/AKOMU-Icon-New-Round-Edges.png" alt="Logo" width="200">
-            <h1>AKOMU.eu</h1>
-            <p>Poczekaj. Masz słaby internet!</p>
-        </class>
+    <!-- Dodajemy klasę 'loading', aby zablokować przewijanie na starcie -->
+    <body class="loading">
+
+        <!-- ================= EKRAN ŁADOWANIA ================= -->
+        <div id="loader-wrapper">
+            <div class="loader-content">
+                <img src="images/AKOMU-Icon-New-Rounded-Edges-Little.png" alt="Loading...">
+                <div class="progress-text">0%</div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="progressBar"></div>
+                </div>
+            </div>
+        </div>
+        <!-- =================================================== -->
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html"><img src="images/AKOMU-Icon-New-Rounded-Edges-Little.png" alt="Logo" width="75"></a></li>
+                <li><a href="https://discord.gg/FMMj8FGYzf" target="_blank">Discord</a></li>
+            </ul>
+        </nav>
+        <main class="main">
+            <img src="images/AKOMU-Icon-New-Rounded-Edges-Little.png" alt="Logo Duże">
+            <h1>AKOMU</h1>
+            <p>aaa</p>
+        </main>
+        <section class="social">
+            <h2>ŚLEDŹ NAS NA SOCIAL MEDIACH :</h2>
+            
+            <div class="cards-container">
+
+                <a href="https://youtube.com/@akomu3" target="_blank" class="card youtube">
+                    <div class="icon-box"><img src="images/LOGA_FIRM/YouTube_Logo.png"></div>
+                    <h3>YouTube</h3>
+                    <span class="tag">@akomu3</span>
+                    <p>Subskrybuj, aby nie przegapić żadnego filmu!</p>
+                </a>
+
+                <a href="https://tiktok.com/@akomu32" target="_blank" class="card tiktok">
+                    <div class="icon-box"><img src="images/LOGA_FIRM/TikTok_Logo_2.png"></div>
+                    <h3>TikTok</h3>
+                    <span class="tag">@akomu32</span>
+                    <p>Obserwuj nas, aby być na bieżąco z nowościami!</p>
+                </a>
+
+                <a href="https://discord.gg/FMMj8FGYzf" target="_blank" class="card discord">
+                    <div class="icon-box"><img src="images/LOGA_FIRM/Discord_Logo.png"></div>
+                    <h3>Discord</h3>
+                    <span class="tag">AKOMU SMP</span>
+                    <p>Zbuduj z nami wspaniałą społeczność discord!</p>
+                </a>
+            </div>
+        </section>
+        <section class="profile">
+            <h2>NASZ ZESPÓŁ :</h2>
+            
+            <div class="profile-container">
+                
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <img src="images/Profile/Profil_F4ress.png" class="profile-pic" alt="Avatar">
+                        <h3>F4ress</h3>
+                    </div>
+                    <p class="profile-desc">OPIS</p>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <img src="images/Profile/Profil_V4xxo.png" class="profile-pic" alt="Avatar">
+                        <h3>V4xxo</h3>
+                    </div>
+                    <p class="profile-desc">Siema, jestem <b>V4xxo</b>. Lubię grać w klocki, a szczególnie w PVP i uczę się montować. Jestem montażystą kanału <b>AKOMU</b> i <b>V4xxo</b>!</p>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <img src="images/Profile/Profil_MatW00.png" class="profile-pic" alt="Avatar">
+                        <h3>MatW00</h3>
+                    </div>
+                    <p class="profile-desc">OPIS</p>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <img src="images/Profile/Profil_Itz_Miska.png" class="profile-pic" alt="Avatar">
+                        <h3>Itz_Miska</h3>
+                    </div>
+                    <p class="profile-desc">OPIS</p>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            const loader = document.getElementById('loader-wrapper');
+            const progressText = document.querySelector('.progress-text');
+            const progressBar = document.getElementById('progressBar');
+            const images = document.images;
+            const imagesCount = images.length;
+            let imagesLoaded = 0;
+
+            function updateProgress() {
+                let percent = imagesCount > 0 ? Math.round((imagesLoaded / imagesCount) * 100) : 0;
+                progressText.innerText = percent + '%';
+                progressBar.style.width = percent + '%';
+            }
+
+            for (let i = 0; i < imagesCount; i++) {
+                if (images[i].complete) {
+                    imagesLoaded++;
+                    updateProgress();
+                } else {
+                    images[i].addEventListener('load', function() {
+                        imagesLoaded++;
+                        updateProgress();
+                    });
+                    images[i].addEventListener('error', function() {
+                        imagesLoaded++;
+                        updateProgress();
+                    });
+                }
+            }
+
+            window.addEventListener('load', function() {
+                progressText.innerText = '100%';
+                progressBar.style.width = '100%';
+
+                setTimeout(function() {
+                    loader.style.opacity = '0';
+                    loader.style.visibility = 'hidden';
+                    document.body.classList.remove('loading');
+                }, 500);
+            });
+        </script>
     </body>
 </html>
-
