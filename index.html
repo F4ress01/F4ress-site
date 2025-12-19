@@ -6,13 +6,12 @@
         <title>AKOMU.eu</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="images/AKOMU-Icon-New-Rounded-Edges-Little.png">
     </head>
-
     <body class="loading">
+
         <div id="loader-wrapper">
             <div class="loader-content">
                 <img src="images/AKOMU-Icon-New-Rounded-Edges-Little.png" alt="Loading...">
@@ -24,51 +23,57 @@
         </div>
 
         <nav class="navbar">
-            <ul>
-                <li><a href="index.html"><img src="images/AKOMU-Icon-New-Rounded-Edges-Little.png" alt="Logo" width="75"></a></li>
-                <li><a href="https://discord.gg/FMMj8FGYzf" target="_blank">Discord</a></li>
-            </ul>
+            <div class="nav-container">
+                <a href="index.html" class="logo-link">
+                    <img src="images/AKOMU-Icon-New-Rounded-Edges-Little.png" alt="Logo">
+                </a>
+                <a href="https://discord.gg/FMMj8FGYzf" target="_blank" class="discord-btn">Discord</a>
+            </div>
         </nav>
-        <main class="main">
-            <img src="images/AKOMU-Icon-New-Rounded-Edges-Little.png" alt="Logo Duże">
-            <h1>AKOMU</h1>
-            <p></p>
-        </main>
-        <section class="social">
-            <h2>ŚLEDŹ NAS NA SOCIAL MEDIACH :</h2>
-            
-            <div class="cards-container">
 
+        <main class="main">
+            <div class="main-content">
+                <img src="images/AKOMU-Icon-New-Rounded-Edges-Little.png" alt="Logo Duże">
+                <h1>AKOMU</h1>
+                <p></p>
+            </div>
+        </main>
+
+        <section class="social">
+            <h2 class="hidden">ŚLEDŹ NAS NA SOCIAL MEDIACH :</h2>
+            
+            <div class="cards-container hidden">
                 <a href="https://youtube.com/@akomu3" target="_blank" class="card youtube">
-                    <div class="icon-box"><img src="images/LOGA_FIRM/YouTube_Logo.png"></div>
+                    <div class="icon-box"><img src="images/LOGA_FIRM/YouTube_Logo.png" alt="YouTube"></div>
                     <h3>YouTube</h3>
                     <span class="tag">@akomu3</span>
                     <p>Subskrybuj, aby nie przegapić żadnego filmu!</p>
                 </a>
 
                 <a href="https://tiktok.com/@akomu32" target="_blank" class="card tiktok">
-                    <div class="icon-box"><img src="images/LOGA_FIRM/TikTok_Logo_2.png"></div>
+                    <div class="icon-box"><img src="images/LOGA_FIRM/TikTok_Logo_2.png" alt="TikTok"></div>
                     <h3>TikTok</h3>
                     <span class="tag">@akomu32</span>
                     <p>Obserwuj nas, aby być na bieżąco z nowościami!</p>
                 </a>
 
                 <a href="https://discord.gg/FMMj8FGYzf" target="_blank" class="card discord">
-                    <div class="icon-box"><img src="images/LOGA_FIRM/Discord_Logo.png"></div>
+                    <div class="icon-box"><img src="images/LOGA_FIRM/Discord_Logo.png" alt="Discord"></div>
                     <h3>Discord</h3>
                     <span class="tag">AKOMU SMP</span>
                     <p>Zbuduj z nami wspaniałą społeczność discord!</p>
                 </a>
             </div>
         </section>
+
         <section class="profile">
-            <h2>NASZ ZESPÓŁ :</h2>
+            <h2 class="hidden">NASZ ZESPÓŁ :</h2>
             
-            <div class="profile-container">
+            <div class="profile-container hidden">
                 
                 <div class="profile-card">
                     <div class="profile-header">
-                        <img src="images/Profile/Profil_F4ress.png" class="profile-pic" alt="Avatar">
+                        <img src="images/Profile/Profil_F4ress.png" class="profile-pic" alt="F4ress">
                         <h3>F4ress</h3>
                     </div>
                     <p class="profile-desc">Witam, tutaj <b>F4ress</b>! Zajmuje się stroną <b>techniczną</b> każdego eventu, strony lub pluginu, a poza tym gram w wiele gier.</p>
@@ -76,7 +81,7 @@
 
                 <div class="profile-card">
                     <div class="profile-header">
-                        <img src="images/Profile/Profil_V4xxo.png" class="profile-pic" alt="Avatar">
+                        <img src="images/Profile/Profil_V4xxo.png" class="profile-pic" alt="V4xxo">
                         <h3>V4xxo</h3>
                     </div>
                     <p class="profile-desc">Siema, jestem <b>V4xxo</b>. Lubię grać w klocki, a szczególnie w PVP i uczę się montować. Jestem montażystą kanału <b>AKOMU</b> i <b>V4xxo</b>!</p>
@@ -84,7 +89,7 @@
 
                 <div class="profile-card">
                     <div class="profile-header">
-                        <img src="images/Profile/Profil_MatW00.png" class="profile-pic" alt="Avatar">
+                        <img src="images/Profile/Profil_MatW00.png" class="profile-pic" alt="MatW00">
                         <h3>MatW00</h3>
                     </div>
                     <p class="profile-desc">Jestem <b>MatW00</b>. Lubię grać w MC,COD,FH5 i inne gry tego typu. Jeśli chcesz ze mną zagrać, zapraszam <b>discord</b>!</p>
@@ -92,7 +97,7 @@
 
                 <div class="profile-card">
                     <div class="profile-header">
-                        <img src="images/Profile/Profil_Itz_Miska.png" class="profile-pic" alt="Avatar">
+                        <img src="images/Profile/Profil_Itz_Miska.png" class="profile-pic" alt="Itz_Miska">
                         <h3>Itz_Miska</h3>
                     </div>
                     <p class="profile-desc">Hejka, jestem <b>Itz_Miska</b>. Moją ulubioną grą jest <b>Terraria</b>, interesuję się <b>animowaniem</b>, a także uwielbiam <b>Lego</b>.</p>
@@ -133,16 +138,23 @@
             window.addEventListener('load', function() {
                 progressText.innerText = '100%';
                 progressBar.style.width = '100%';
-
                 setTimeout(function() {
                     loader.style.opacity = '0';
                     loader.style.visibility = 'hidden';
                     document.body.classList.remove('loading');
                 }, 500);
             });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            const hiddenElements = document.querySelectorAll('.hidden');
+            hiddenElements.forEach((el) => observer.observe(el));
         </script>
     </body>
-
 </html>
-
-
